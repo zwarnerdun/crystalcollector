@@ -2,12 +2,14 @@
 var randomresult;
 var wins = 0;
 var losses = 0;
-console.log(losses)
+// console.log(losses)
 // The random number shown at the start of the game should be between 19 - 120.
 var randomnumber = Math.floor(Math.random() * 120 + 19);
 // 4 crystals
 for (var i = 0; i < 4; i++){
-    console.log("Hello");
+    var crystal = $("<div>");
+    $(".crystals").append(crystal);
+    // console.log("Hello");
 };
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
 // Each crystal should have a random hidden value between 1 - 12.
