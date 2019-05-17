@@ -1,0 +1,30 @@
+h1{
+    background-color: orchid;
+    font-weight:bold;
+    color: white;
+    font-size: 40px;
+    width: 500px;
+    height: 90px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.instructions,h2{
+    background-color: aquamarine;
+    font-weight: bold;
+    color:black;
+    font-size: 15;
+}
+
+#randomnumber{
+
+}
+
+#one,#two,#three,#four{
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
