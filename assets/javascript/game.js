@@ -28,7 +28,6 @@ function reset(){
 }
 // The player wins if their total score matches the random number from the beginning of the game.
 function winner(){
-alert("You're a winner!")
     wins++; 
     $('#ofwins').text(wins);
     reset();
@@ -36,7 +35,6 @@ alert("You're a winner!")
 }
 // The player loses if their score goes above the random number.
 function loser(){
-alert("Sorry you lost")
     losses++;
     $('#oflosses').text(losses);
     reset();
