@@ -32,7 +32,7 @@ h1{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .winsandlosses{
@@ -40,7 +40,9 @@ h1{
     background-color:lightcoral;
     width: 100px;
     height: 100px;
+    font-weight: bold;
 }
+
 
 .crystals{
     clear: both;
@@ -50,7 +52,8 @@ h1{
 .Total{
     background-color: palevioletred;
     width: 200px;
-    height:200px;
+    height:100px;
+    margin-bottom: 20px;
 }
 
 #OverallTotal{
