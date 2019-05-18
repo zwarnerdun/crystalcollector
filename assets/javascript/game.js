@@ -1,7 +1,6 @@
 $(document).ready(function(){
     var randomnumber = Math.floor(Math.random() * 101 + 19);
-    // The player will be shown a random number at the start of the game.
-    // The random number shown at the start of the game should be between 19 - 120.
+    // The random number shown at the start of the game should be between 19 - 120 when game starts.
     $('#randomnumber').text(randomnumber);
     // When the game begins again, the player should see a new random number. 
     var num1= Math.floor(Math.random()*11+1)
@@ -15,7 +14,7 @@ $(document).ready(function(){
     // console.log(losses)
 $('#ofwins').text(wins);
 $('#oflosses').text(losses);
-//Game reset
+// The game restarts whenever the player wins or loses.
 function reset(){
     randomnumber=Math.floor(Math.random() * 101 + 19);
     console.log(randomnumber)
@@ -27,20 +26,21 @@ function reset(){
     Total= 0;
     $('#OverallTotal').text(Total);     
 }
-// The game restarts whenever the player wins or loses.
 // The player wins if their total score matches the random number from the beginning of the game.
 function winner(){
 alert("You're a winner!")
     wins++; 
     $('#ofwins').text(wins);
     reset();
+    document.getElementById("#ofwins").innerHTML = " " + wins;
 }
 // The player loses if their score goes above the random number.
 function loser(){
 alert("Sorry you lost")
     losses++;
     $('#oflosses').text(losses);
-    reset()
+    reset();
+    document.getElementById("#oflosses").innerHTML = " " + losses;
 }
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
 $('#one').on ('click', function(){
