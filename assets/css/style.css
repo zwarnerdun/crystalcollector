@@ -14,10 +14,16 @@ h1{
     font-weight: bold;
     color:black;
     font-size: 15;
+    width: 500px
 }
 
-#randomnumber{
-
+#randomnumber,.MatchthisNumber{
+    color:white;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    float: left;
 }
 
 #one,#two,#three,#four{
@@ -25,6 +31,32 @@ h1{
     width: 100px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.winsandlosses{
+    float: left;
+    background-color:lightcoral;
+    width: 100px;
+    height: 100px;
+}
+
+.crystals{
+    clear: both;
+
+}
+
+.Total{
+    background-color: palevioletred;
+    width: 200px;
+    height:200px;
+}
+
+#OverallTotal{
+    font-weight: bold
+}
+
+body{
+    background-image:url("../images/coolprint.png")
 }

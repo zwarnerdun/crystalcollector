@@ -1,33 +1,98 @@
-// The player will be shown a random number at the start of the game.
-var randomresult;
-var wins = 0;
-var losses = 0;
-// console.log(losses)
-// The random number shown at the start of the game should be between 19 - 120.
-var randomnumber = Math.floor(Math.random() * 120 + 19);
-// 4 crystals
-for (var i = 0; i < 4; i++){
-    var crystal = $("<div>");
-    $(".crystals").append(crystal);
-    // console.log("Hello");
-};
-// When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
-// Each crystal should have a random hidden value between 1 - 12.
-
-// Your game will hide this amount until the player clicks a crystal.
-// When they do click one, update the player's score counter.
-
-
-// The player wins if their total score matches the random number from the beginning of the game.
-// The player loses if their score goes above the random number.
-
+$(document).ready(function(){
+    var randomnumber = Math.floor(Math.random() * 101 + 19);
+    // The player will be shown a random number at the start of the game.
+    // The random number shown at the start of the game should be between 19 - 120.
+    $('#randomnumber').text(randomnumber);
+    // When the game begins again, the player should see a new random number. 
+    var num1= Math.floor(Math.random()*11+1)
+    var num2= Math.floor(Math.random()*11+1)
+    var num3= Math.floor(Math.random()*11+1)
+    var num4= Math.floor(Math.random()*11+1)
+    // Each crystal should have a random hidden value between 1 - 12.
+    var Total = 0;
+    var wins = 0;
+    var losses = 0;
+    // console.log(losses)
+$('#ofwins').text(wins);
+$('#oflosses').text(losses);
+//Game reset
+function reset(){
+    randomnumber=Math.floor(Math.random() * 101 + 19);
+    console.log(randomnumber)
+    $('#randomnumber').text(randomnumber);
+    num1= Math.floor(Math.random()*11+1);
+    num2= Math.floor(Math.random()*11+1);
+    num3= Math.floor(Math.random()*11+1);
+    num4= Math.floor(Math.random()*11+1);
+    Total= 0;
+    $('#OverallTotal').text(Total);     
+}
 // The game restarts whenever the player wins or loses.
-
-
-// When the game begins again, the player should see a new random number. 
-//Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
-
-
-// The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
-
-
+// The player wins if their total score matches the random number from the beginning of the game.
+function winner(){
+alert("You're a winner!")
+    wins++; 
+    $('#ofwins').text(wins);
+    reset();
+}
+// The player loses if their score goes above the random number.
+function loser(){
+alert("Sorry you lost")
+    losses++;
+    $('#oflosses').text(losses);
+    reset()
+}
+// When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
+$('#one').on ('click', function(){
+    Total = Total + num1;
+    console.log("New Total= " + Total);
+    $("#OverallTotal").text(Total); 
+        if (Total == randomnumber){
+            winner();
+        }
+        else if ( Total > randomnumber){
+            loser();
+        }   
+    
+    }
+),
+$('#two').on ('click', function(){
+    Total = Total + num2;
+    console.log("New Total= " + Total);
+    $("#OverallTotal").text(Total); 
+        if (Total == randomnumber){
+            winner();
+        }
+        else if ( Total > randomnumber){
+            loser();
+        }   
+    
+    }
+     
+),
+$('#three').on ('click', function(){
+    Total = Total + num3;
+    console.log("New OverallTotal= " + Total);
+    $("#OverallTotal").text(Total); 
+        if (Total == randomnumber){
+            winner();
+        }
+        else if (Total > randomnumber){
+            loser();
+        }   
+    
+    }
+     
+),
+$('#four').on ('click', function(){
+    Total = Total + num4;
+    console.log("New OverallTotal= " + Total);
+    $("#OverallTotal").text(Total); 
+        if (Total == randomnumber){
+            winner();
+        }
+        else if ( Total > randomnumber){
+            loser();
+        }
+    });      
+});
