@@ -1,4 +1,4 @@
-# unit-4-game
+# Crystal Collector
 In this assignment, you'll create another fun and interactive game for web browsers. This time, your app must dynamically update your HTML pages with the jQuery library.
 
 # Getting Started
@@ -11,7 +11,7 @@ Here's how the app works:
 * The game restarts whenever the player wins or loses.
 
 # Deployment
-Check it out here: https://zwarnerdun.github.io/unit-4-game/
+Check it out here: https://zwarnerdun.github.io/crystalcollector/
 
 ![crystal](https://user-images.githubusercontent.com/49568886/64915124-cfb8b680-d72d-11e9-92df-9cc2f0718b76.PNG)
 
